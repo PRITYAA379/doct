@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Your Name, the funny physiotherapist, to book a session or share a joke. Let’s fix your pain!">
+    <meta name="keywords" content="physiotherapist contact, funny physio, book physiotherapy">
+    <title>Contact - Your Name Physiotherapy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Contact the Laughing Physio</h1>
+        </header>
+        <main>
+            <section>
+                <p>Got a sore back or a killer joke? Let’s fix one and laugh at the other!</p>
+                <a href="https://calendly.com/yourname" class="link-button">Book a Session</a>
+                <form id="contact-form" class="email-form">
+                    <h2>Drop a Message (Or a Pun)</h2>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="contact-email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message (Jokes Welcome)" required></textarea>
+                    <button type="submit">Send It</button>
+                    <p id="contact-form-message" class="form-message"></p>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 Your Name Physiotherapy. Keep laughing, keep moving!</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
