@@ -1,43 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Licensed physiotherapist specializing in sports injuries and post-surgery rehab. Book a session or download free mobility guides.">
-    <meta name="keywords" content="physiotherapist, physical therapy, sports injury, rehab, mobility">
-    <meta name="author" content="Your Name">
-    <title>Your Name - Physiotherapist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
-            <h1>Your Name, PT</h1>
-            <p>Licensed Physiotherapist helping you regain mobility and live pain-free. Specializing in sports injuries and post-surgery rehab.</p>
-        </header>
-        <main>
-            <div class="links">
-                <a href="https://calendly.com/yourname" class="link-button">Book Your Session</a>
-                <a href="https://yourwebsite.com/free-guide" class="link-button">Download Free Mobility Guide</a>
-                <a href="https://yourwebsite.com/about" class="link-button">Learn About Our Services</a>
-                <a href="https://yourwebsite.com/contact" class="link-button">Contact Me</a>
-                <a href="https://www.instagram.com/yourname" class="link-button social">Follow on Instagram</a>
-                <a href="https://www.linkedin.com/in/yourname" class="link-button social">Connect on LinkedIn</a>
-            </div>
-            <form id="email-form" class="email-form">
-                <h2>Get Exclusive Tips!</h2>
-                <p>Sign up for free weekly physiotherapy tips and exercises.</p>
-                <input type="email" id="email" placeholder="Enter your email" required>
-                <button type="submit">Sign Up</button>
-                <p id="form-message" class="form-message"></p>
-            </form>
-        </main>
-        <footer>
-            <p>&copy; 2025 Your Name Physiotherapy. All rights reserved.</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a.active {
+    background-color: #0056b3;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007bff;
+}
+
+h1 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+p, ul {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.link-button {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+    background-color: #0056b3;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.email-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.email-form input, .email-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.email-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.email-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.email-form button:hover {
+    background-color: #0056b3;
+}
+
+.form-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #28a745;
+}
+
+footer {
+    font-size: 14px;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .link-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
