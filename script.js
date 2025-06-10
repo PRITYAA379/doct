@@ -1,3 +1,22 @@
+// Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
+
 // Email form handling (Resources page)
 const emailForm = document.getElementById('email-form');
 if (emailForm) {
@@ -8,7 +27,7 @@ if (emailForm) {
 
         if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             message.textContent = 'Haha, you’re in! Check your email for jokes & tips!';
-            message.style.color = '#28a745';
+            message.style.color = '#2ecc71';
             // Integrate with email service (e.g., Mailchimp) here
             emailForm.reset();
         } else {
@@ -30,7 +49,7 @@ if (contactForm) {
 
         if (name && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && messageText) {
             message.textContent = 'Message sent! Your joke’s under review, but your pain’s my priority!';
-            message.style.color = '#28a745';
+            message.style.color = '#2ecc71';
             // Send form data to backend or email service here
             contactForm.reset();
         } else {
